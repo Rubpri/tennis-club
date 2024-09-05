@@ -13,3 +13,11 @@
 .rounded-top-right {
     border-top-right-radius: 0.5rem;
 }
+
+.fa-solid {
+    cursor: pointer;
+}
+
+.fa-solid:hover {
+    color: green;
+}
