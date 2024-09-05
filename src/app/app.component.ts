@@ -3,12 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { ResumenLigasComponent } from './Components/inicio/resumen-ligas/resumen-ligas.component';
 import { UltimasNoticiasComponent } from './Components/inicio/ultimas-noticias/ultimas-noticias.component';
+import { FooterComponent } from './Components/footer/footer.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, ResumenLigasComponent, UltimasNoticiasComponent],
+  imports: [RouterOutlet, NavbarComponent, ResumenLigasComponent, UltimasNoticiasComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
