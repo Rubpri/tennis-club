@@ -1,25 +1,13 @@
 <div class="pistas">
   <div class="container z-index">
-  <img src="logotenis.png" alt="LogoTenis" style="height: 140px;">
+  <img src="logotenis.png" alt="LogoTenis" style="height: 140px;" (click)="navigateToHome()">
   </div>
 </div>
 
 <app-navbar></app-navbar>
 
-<div class="container mt-3">
-  
-  <div class="row">
-
-    <div class="col-12 col-md-4">
-      <app-resumen-ligas></app-resumen-ligas>
-    </div>
-
-    <div class="col-12 col-md-8">
-      <app-ultimas-noticias></app-ultimas-noticias>
-    </div>
-
-  </div>
-
+<div class="mt-3"> 
+  <router-outlet></router-outlet>
 </div>
 
 <app-footer class="mt-3"></app-footer>

@@ -4,6 +4,7 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { ResumenLigasComponent } from './Components/inicio/resumen-ligas/resumen-ligas.component';
 import { UltimasNoticiasComponent } from './Components/inicio/ultimas-noticias/ultimas-noticias.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,4 +16,13 @@ import { FooterComponent } from './Components/footer/footer.component';
 })
 export class AppComponent {
   title = 'tennis-club';
+
+  constructor(private router: Router) {
+
+  }
+
+  navigateToHome() {
+    this.router.navigate([''])
+  }
+
 }

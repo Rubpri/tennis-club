@@ -21,3 +21,11 @@ img:hover {
     cursor: pointer;
     transition: color 0.3s; 
 }
+
+.navbar-nav .nav-item.active {
+    color: green;
+}
+
+.navbar-nav .nav-item.active a.nav-link {
+    color: green;
+}

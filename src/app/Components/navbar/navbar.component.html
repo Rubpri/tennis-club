@@ -2,7 +2,7 @@
     <div class="container">
 
         <!-- Logo Tennis-->
-        <img src="logorp.jpg" alt="Logo" style="height: 40px;">
+        <img src="logorp.jpg" alt="Logo" style="height: 40px;" (click)="navigateToHome()">
 
         <!-- Toggle Btn -->
         <button 
@@ -41,26 +41,33 @@
         <div class="offcanvas-body d-flex p-4 flex-column flex-lg-row p-lg-0">
 
             <ul class="navbar-nav d-flex justify-content-center fs-6 flex-grow-1 text-start text-lg-center">
-                <!-- <ul class="navbar-nav d-flex justify-content-center fs-6 flex-grow-1 text-center text-sm-start"></ul> -->
-                <li class="nav-item mx-2 d-flex flex-row flex-lg-column align-items-center pt-2">
+                <li 
+                class="nav-item mx-2 d-flex flex-row flex-lg-column align-items-center pt-2"
+                (click)="navigateToElClub()"
+                [ngClass]="{'active': isActive('/el-club')}"
+                >
                     <i class="fa-solid fa-house me-2 me-lg-0"></i>
-                    <a class="nav-link" href="#elclub">EL CLUB</a>
+                    <a class="nav-link" data-bs-dismiss="offcanvas">EL CLUB</a>
                 </li>
-                <li class="nav-item mx-2 d-flex flex-row flex-lg-column align-items-center pt-2">
+                <li 
+                class="nav-item mx-2 d-flex flex-row flex-lg-column align-items-center pt-2"
+                >
                     <i class="fa-solid fa-trophy me-2 me-lg-0"></i>
-                    <a class="nav-link" href="#campeonatos">CAMPEONATOS</a>
+                    <a class="nav-link" data-bs-dismiss="offcanvas">CAMPEONATOS</a>
                 </li>
-                <li class="nav-item mx-2 d-flex flex-row flex-lg-column align-items-center pt-2">
+                <li 
+                class="nav-item mx-2 d-flex flex-row flex-lg-column align-items-center pt-2"
+                >
                     <i class="fa-solid fa-newspaper me-2 me-lg-0"></i>
-                    <a class="nav-link" href="#noticias">NOTICIAS</a>
+                    <a class="nav-link" data-bs-dismiss="offcanvas">NOTICIAS</a>
                 </li>
                 <li class="nav-item mx-2 d-flex flex-row flex-lg-column align-items-center pt-2">
                     <i class="fa-solid fa-star me-2 me-lg-0"></i>
-                    <a class="nav-link" href="#patrocinadores">PATROCINADORES</a>
+                    <a class="nav-link" data-bs-dismiss="offcanvas">PATROCINADORES</a>
                 </li>
                 <li class="nav-item mx-2 d-flex flex-row flex-lg-column align-items-center pt-2">
                     <i class="fa-solid fa-envelope me-2 me-lg-0"></i>
-                    <a class="nav-link" href="#contacto">CONTACTO</a>
+                    <a class="nav-link" data-bs-dismiss="offcanvas">CONTACTO</a>
                 </li>
             </ul>
             
@@ -72,7 +79,7 @@
             <a href="https://www.instagram.com/" target="_blank" class="text-dark">
                 <i class="fa-brands fa-instagram me-4"></i>
             </a>
-            <a href="https://www.instagram.com/" target="_blank" class="text-dark">
+            <a href="https://facebook.com/" target="_blank" class="text-dark">
                 <i class="fa-brands fa-facebook me-3"></i>
             </a>
         </div>
@@ -80,21 +87,18 @@
     </div>
   </nav>
 
-
-  <!-- Modal -->
-<div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Iniciar sesión / Registrarse</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
+  <!-- EL CLUB - Navbar -->
+  <nav *ngIf="isClubNavbarVisible" class="navbar navbar-expand-lg navbar-secondary bg-light border-bottom">
+    <div class="container">
+      <ul class="navbar-nav d-flex justify-content-start flex-row">
+        <li 
+        class="nav-item border-end pe-2"
+        >
+          <a class="nav-link">Sobre nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ms-2">¡Hazte socio!</a>
+        </li>
+      </ul>
     </div>
-  </div>
+  </nav>

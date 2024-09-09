@@ -19,7 +19,6 @@
     <div class="card-body">
         <div class="border-bottom mb-2 d-flex align-items-center">
             <h5 class="card-title">Divisón de Honor</h5> 
-            <!-- <i class="fa-solid fa-right-long ms-auto fs-4"></i> -->
         </div>
         
         <table class="table">
@@ -90,7 +89,7 @@
     </div>
   </div>
 
-  <div class="card mb-3" *ngIf="currentCard === 1">
+  <div class="card mb-3" *ngIf="currentCard === 2">
     <div class="card-body">
       <h5 class="card-title border-bottom pb-2">Primera División</h5> 
         
@@ -191,13 +190,13 @@
 
         
         <div class="align-items-center text-center">
-            <i class="fa-solid fa-left-long fs-3 me-4" (click)="currentCard = 3"></i>
-            <i class="fa-solid fa-right-long fs-3 ms-4" (click)="currentCard=2"></i>
+            <i class="fa-solid fa-left-long fs-3 me-4" (click)="currentCard = 1"></i>
+            <i class="fa-solid fa-right-long fs-3 ms-4" (click)="currentCard = 3"></i>
         </div>
     </div>
   </div>
 
-  <div class="card mb-3" *ngIf="currentCard === 2">
+  <div class="card mb-3" *ngIf="currentCard === 3">
     <div class="card-body">
       <h5 class="card-title border-bottom pb-2">Segunda División</h5> 
         
@@ -263,176 +262,69 @@
             </tbody>
         </table>
         <div class="align-items-center text-center">
-            <i class="fa-solid fa-left-long fs-3 me-4" (click)="currentCard = 1"></i>
-            <i class="fa-solid fa-right-long fs-3 ms-4" (click)="currentCard = 3"></i>
+            <i class="fa-solid fa-left-long fs-3 me-4" (click)="currentCard = 2"></i>
+            <i class="fa-solid fa-right-long fs-3 ms-4" (click)="currentCard = 1"></i>
         </div>
     </div>
   </div>
 
-  <div class="card mt-b" *ngIf="currentCard === 2">
+ <!-- últimos resultados -->
+
+ <div class="card mb-3">
     <div class="card-body">
-      <h5 class="card-title border-bottom pb-2">Tercera División</h5> 
+      <h5 class="card-title border-bottom pb-2">Últimos Resultados</h5> 
         
         <table class="table">
             <thead>
                 <tr class="border-bottom border-dark">
-                    <th class="text-start bg-title text-white rounded-top-left">Liga Oro</th>
-                    <th class="text-end bg-title text-white">V</th>
-                    <th class="text-end bg-title text-white">D</th>
-                    <th class="text-end bg-title text-white rounded-top-right">PJ</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="text-start bg-grey">Novak Djokovic</td>
-                    <td class="text-end bg-grey">18</td>
-                    <td class="text-end bg-grey">2</td>
-                    <td class="text-end bg-grey">20</td>
-                </tr>
-                <tr>
-                    <td class="text-start">Roger Federer</td>
-                    <td class="text-end">16</td>
-                    <td class="text-end">4</td>
-                    <td class="text-end">20</td>
-                </tr>
-                <tr>
-                    <td class="text-start bg-grey">Rafael Nadal</td>
-                    <td class="text-end bg-grey">15</td>
-                    <td class="text-end bg-grey">5</td>
-                    <td class="text-end bg-grey">20</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <table class="table">
-            <thead>
-                <tr class="border-bottom border-dark">
-                    <th class="text-start bg-title text-white rounded-top-left">Liga Platino</th>
-                    <th class="text-end bg-title text-white">V</th>
-                    <th class="text-end bg-title text-white">D</th>
-                    <th class="text-end bg-title text-white rounded-top-right">PJ</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="text-start bg-grey">Pepe Ortega</td>
-                    <td class="text-end bg-grey">18</td>
-                    <td class="text-end bg-grey">2</td>
-                    <td class="text-end bg-grey">20</td>
-                </tr>
-                <tr>
-                    <td class="text-start">Ignacio Williams</td>
-                    <td class="text-end">16</td>
-                    <td class="text-end">4</td>
-                    <td class="text-end">20</td>
-                </tr>
-                <tr>
-                    <td class="text-start bg-grey">Roberto Casanova</td>
-                    <td class="text-end bg-grey">15</td>
-                    <td class="text-end bg-grey">5</td>
-                    <td class="text-end bg-grey">20</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="align-items-center text-center">
-            <i class="fa-solid fa-left-long fs-3 me-4" (click)="currentCard=1"></i>
-            <i class="fa-solid fa-right-long fs-3 ms-4" (click)="currentCard=3"></i>
-        </div>
-    </div>
-  </div>
-
-  <div class="card mb-3" *ngIf="currentCard === 3">
-    <div class="card-body">
-      <h5 class="card-title border-bottom pb-2">Liga Dobles</h5> 
-        
-        <table class="table">
-            <thead>
-                <tr class="border-bottom border-dark">
-                    <th class="text-start bg-title text-white rounded-top-left">Liga Oro</th>
-                    <th class="text-end bg-title text-white">V</th>
-                    <th class="text-end bg-title text-white">D</th>
-                    <th class="text-end bg-title text-white rounded-top-right">PJ</th>
+                    <th class="text-start bg-title text-white rounded-top-left">Partido</th>
+                    <th class="text-end bg-title text-white rounded-top-right"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td class="text-start bg-grey">
-                        Novak Djokovic
+                        <b>Novak Djokovic</b>
                         <br>
-                        Jorge Pérez
+                        Dominic Thiem
+
                     </td>
-                    <td class="text-end bg-grey">18</td>
-                    <td class="text-end bg-grey">2</td>
-                    <td class="text-end bg-grey">20</td>
+                    <td class="text-end bg-grey">
+                        <b>2</b>
+                        <br>
+                        1
+                    </td>
                 </tr>
                 <tr>
                     <td class="text-start">
-                        Roger Federer
+                        <b>Novak Djokovic</b>
                         <br>
-                        José Montoya
+                        Dominic Thiem
+
                     </td>
-                    <td class="text-end">16</td>
-                    <td class="text-end">4</td>
-                    <td class="text-end">20</td>
+                    <td class="text-end">
+                        <b>2</b>
+                        <br>
+                        1
+                    </td>
                 </tr>
                 <tr>
                     <td class="text-start bg-grey">
-                        Rafael Nadal
+                        <b>Novak Djokovic</b> 
                         <br>
-                        Carlos Coru
+                        Dominic Thiem
                     </td>
-                    <td class="text-end bg-grey">15</td>
-                    <td class="text-end bg-grey">5</td>
-                    <td class="text-end bg-grey">20</td>
+                    <td class="text-end bg-grey">
+                        <b>2</b>
+                        <br>
+                        1
+                    </td>
                 </tr>
             </tbody>
         </table>
 
-        <table class="table">
-            <thead>
-                <tr class="border-bottom border-dark">
-                    <th class="text-start bg-title text-white rounded-top-left">Liga Platino</th>
-                    <th class="text-end bg-title text-white">V</th>
-                    <th class="text-end bg-title text-white">D</th>
-                    <th class="text-end bg-title text-white rounded-top-right">PJ</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="text-start bg-grey">
-                        Pepe Ortega
-                        <br>
-                        Paco Perez
-                    </td>
-                    <td class="text-end bg-grey">18</td>
-                    <td class="text-end bg-grey">2</td>
-                    <td class="text-end bg-grey">20</td>
-                </tr>
-                <tr>
-                    <td class="text-start">
-                        Ignacio Williams
-                        <br>
-                        Jorge Casanova
-                    </td>
-                    <td class="text-end">16</td>
-                    <td class="text-end">4</td>
-                    <td class="text-end">20</td>
-                </tr>
-                <tr>
-                    <td class="text-start bg-grey">
-                        Roberto Lillo
-                        <br>
-                        Sergio Prieto
-                    </td>
-                    <td class="text-end bg-grey">15</td>
-                    <td class="text-end bg-grey">5</td>
-                    <td class="text-end bg-grey">20</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="align-items-center text-center">
-            <i class="fa-solid fa-left-long fs-3 me-4" (click)="currentCard=2"></i>
-            <i class="fa-solid fa-right-long fs-3 ms-4" (click)="currentCard=1"></i>
-        </div>
     </div>
   </div>
+
+</div>
+ 
