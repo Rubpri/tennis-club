@@ -24,8 +24,12 @@ export class NavbarComponent {
     this.router.navigate([''])
   }
 
-  navigateToElClub() {
-    this.router.navigate(['/el-club'])
+  navigateToElClubSobreNosotros() {
+    this.router.navigate(['/el-club/sobre-nosotros'])
+  }
+
+  navigateToElClubHazteSocio() {
+    this.router.navigate(['/el-club/hazte-socio'])
   }
 
   ngOnInit(): void {
