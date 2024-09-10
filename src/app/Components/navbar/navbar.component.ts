@@ -13,10 +13,12 @@ import { filter } from 'rxjs';
 export class NavbarComponent {
 
   public isClubNavbarVisible: boolean;
+  public isCampeonatosVisible: boolean;
   public currentUrl: string;
 
   constructor(private router: Router) {
     this.isClubNavbarVisible = false;
+    this.isCampeonatosVisible = false;
     this.currentUrl = '';
   }
 
@@ -32,11 +34,24 @@ export class NavbarComponent {
     this.router.navigate(['/el-club/hazte-socio'])
   }
 
+  navigateToCampeonatosDivisionDeHonor() {
+    this.router.navigate(['/campeonatos/division-de-honor'])
+  }
+
+  navigateToCampeonatosPrimeraDivision() {
+    this.router.navigate(['/campeonatos/primera-division'])
+  }
+
+  navigateToCampeonatosSegundaDivision() {
+    this.router.navigate(['/campeonatos/segunda-division'])
+  }
+
   ngOnInit(): void {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
       this.isClubNavbarVisible = this.router.url.startsWith('/el-club');
+      this.isCampeonatosVisible = this.router.url.startsWith('/campeonatos')
       this.currentUrl = this.router.url;
     });
   }

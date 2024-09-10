@@ -51,6 +51,8 @@
                 </li>
                 <li 
                 class="nav-item mx-2 d-flex flex-row flex-lg-column align-items-center pt-2"
+                (click)="navigateToCampeonatosDivisionDeHonor()"
+                [ngClass]="{'active': isActive('/campeonatos')}"
                 >
                     <i class="fa-solid fa-trophy me-2 me-lg-0"></i>
                     <a class="nav-link" data-bs-dismiss="offcanvas">CAMPEONATOS</a>
@@ -104,6 +106,35 @@
             [ngClass]="{'active': isActive('/el-club/hazte-socio')}"    
         >
           <a class="nav-link ms-2">¡Hazte socio!</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Campeonatos - Navbar -->
+  <nav *ngIf="isCampeonatosVisible" class="navbar navbar-expand-lg navbar-secondary bg-light border-bottom">
+    <div class="container">
+      <ul class="navbar-nav d-flex justify-content-start flex-row">
+        <li 
+        class="nav-item border-end pe-2"
+        (click)="navigateToCampeonatosDivisionDeHonor()"
+        [ngClass]="{'active': isActive('/campeonatos/division-de-honor')}"
+        >
+          <a class="nav-link">División de Honor</a>
+        </li>
+        <li 
+            class="nav-item border-end pe-2"
+            (click)="navigateToCampeonatosPrimeraDivision()"
+            [ngClass]="{'active': isActive('/campeonatos/primera-division')}"    
+        >
+          <a class="nav-link ms-2">Primera División</a>
+        </li>
+        <li 
+            class="nav-item"
+            (click)="navigateToCampeonatosSegundaDivision()"
+            [ngClass]="{'active': isActive('/campeonatos/segunda-division')}"    
+        >
+          <a class="nav-link ms-2">Segunda División</a>
         </li>
       </ul>
     </div>
