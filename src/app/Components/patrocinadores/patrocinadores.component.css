@@ -1,0 +1,9 @@
+.container {
+    max-width: 1024px;
+}
+
+img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+  }

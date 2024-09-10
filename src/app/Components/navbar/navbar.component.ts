@@ -46,6 +46,10 @@ export class NavbarComponent {
     this.router.navigate(['/campeonatos/segunda-division'])
   }
 
+  navigateToPatrocinadores() {
+    this.router.navigate(['/patrocinadores'])
+  }
+
   ngOnInit(): void {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)

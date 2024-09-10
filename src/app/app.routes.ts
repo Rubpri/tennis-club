@@ -10,6 +10,9 @@ import { DivisionDeHonorComponent } from './Components/campeonatos/division-de-h
 import { PrimeraDivisionComponent } from './Components/campeonatos/primera-division/primera-division.component';
 import { SegundaDivisionComponent } from './Components/campeonatos/segunda-division/segunda-division.component';
 
+// Patrocinadores
+import { PatrocinadoresComponent } from './Components/patrocinadores/patrocinadores.component';
+
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -18,5 +21,6 @@ export const routes: Routes = [
     {path: 'campeonatos/division-de-honor', component: DivisionDeHonorComponent},
     {path: 'campeonatos/primera-division', component: PrimeraDivisionComponent},
     {path: 'campeonatos/segunda-division', component: SegundaDivisionComponent},
+    {path: 'patrocinadores', component: PatrocinadoresComponent},
     {path: '**', redirectTo: '' },
 ];
