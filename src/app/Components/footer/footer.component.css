@@ -36,3 +36,7 @@ img {
     position: relative;
     z-index: 2;
   }
+
+  .footer-clicks p {
+    cursor: pointer;
+  }

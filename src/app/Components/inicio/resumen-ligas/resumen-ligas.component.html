@@ -15,10 +15,10 @@
 
 <div id="collapseResumenLigas" class="collapse d-md-block">
 
-<div class="card mb-3" *ngIf="currentCard === 1">
+<div class="card mb-3 h5-click" *ngIf="currentCard === 1">
     <div class="card-body">
         <div class="border-bottom mb-2 d-flex align-items-center">
-            <h5 class="card-title">Divisón de Honor</h5> 
+            <h5 class="card-title" (click)="navigateToCampeonatosDivisionDeHonor()">Divisón de Honor</h5> 
         </div>
         
         <table class="table">
@@ -59,9 +59,9 @@
     </div>
   </div>
 
-  <div class="card mb-3" *ngIf="currentCard === 2">
+  <div class="card mb-3 h5-click" *ngIf="currentCard === 2">
     <div class="card-body">
-      <h5 class="card-title border-bottom pb-2">Primera División</h5> 
+      <h5 class="card-title border-bottom pb-2" (click)="navigateToCampeonatosPrimeraDivision()">Primera División</h5> 
         
         <table class="table">
             <thead>
@@ -102,9 +102,9 @@
     </div>
   </div>
 
-  <div class="card mb-3" *ngIf="currentCard === 3">
+  <div class="card mb-3 h5-click" *ngIf="currentCard === 3">
     <div class="card-body">
-      <h5 class="card-title border-bottom pb-2">Segunda División</h5> 
+      <h5 class="card-title border-bottom pb-2" (click)="navigateToCampeonatosSegundaDivision()">Segunda División</h5> 
         
         <table class="table">
             <thead>

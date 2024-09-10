@@ -21,3 +21,7 @@
 .fa-solid:hover {
     color: green;
 }
+
+.h5-click h5 {
+    cursor: pointer;
+}
