@@ -1,0 +1,45 @@
+<div class="container">
+    
+    <div class="row d-flex align-items-center">
+        <div class="col-12 col-md-6 fs-5">
+            <div class="mb-4">
+                <i class="fa-regular fa-clock me-2"></i>
+                <span>De lunes a viernes 8.00h a 21.00h</span>
+            </div>
+            <div class="mb-4">
+                <i class="fa-regular fa-envelope me-2"></i>
+                <span>info&#64;clubdetenis.com</span>
+            </div>
+            <div class="mb-4">
+                <i class="fa-solid fa-phone me-2"></i>
+                <span>+34 600 010 001</span>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 card p-3">
+            <form [formGroup]="contactoForm" (ngSubmit)="enviarFormulario()">
+                <div class="mb-3">
+                    <input type="text" formControlName="nombre" class="form-control" id="nombre" placeholder="Nombre" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" formControlName="asunto" class="form-control" id="asunto" placeholder="Asunto" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" formControlName="mensaje" id="mensaje" rows="3" placeholder="Mensaje" required></textarea>
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" formControlName="privacidad" class="form-check-input" id="exampleCheck1" required>
+                  <label class="form-check-label" for="exampleCheck1">
+                    He leído y acepto la política de privacidad.  
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Enviar
+                </button>
+            </form>
+        
+        </div>
+    </div>
+</div>

@@ -13,6 +13,9 @@ import { SegundaDivisionComponent } from './Components/campeonatos/segunda-divis
 // Patrocinadores
 import { PatrocinadoresComponent } from './Components/patrocinadores/patrocinadores.component';
 
+// Contacto
+import { ContactoComponent } from './Components/contacto/contacto/contacto.component';
+
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -22,5 +25,6 @@ export const routes: Routes = [
     {path: 'campeonatos/primera-division', component: PrimeraDivisionComponent},
     {path: 'campeonatos/segunda-division', component: SegundaDivisionComponent},
     {path: 'patrocinadores', component: PatrocinadoresComponent},
+    {path: 'contacto', component: ContactoComponent},
     {path: '**', redirectTo: '' },
 ];

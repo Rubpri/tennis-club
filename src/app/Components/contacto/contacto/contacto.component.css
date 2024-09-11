@@ -1,0 +1,8 @@
+.container {
+    max-width: 1024px;
+}
+
+.form-control, .form-check-input {
+    border-width: 2px;
+    border-style: solid;
+  }
