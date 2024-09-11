@@ -71,7 +71,11 @@
                     <i class="fa-solid fa-star me-2 me-lg-0"></i>
                     <a class="nav-link" data-bs-dismiss="offcanvas">PATROCINADORES</a>
                 </li>
-                <li class="nav-item mx-2 d-flex flex-row flex-lg-column align-items-center pt-2">
+                <li 
+                class="nav-item mx-2 d-flex flex-row flex-lg-column align-items-center pt-2"
+                (click)="navigateToContacto()"
+                [ngClass]="{'active': isActive('/contacto')}"
+                >
                     <i class="fa-solid fa-envelope me-2 me-lg-0"></i>
                     <a class="nav-link" data-bs-dismiss="offcanvas">CONTACTO</a>
                 </li>
