@@ -29,3 +29,7 @@ img:hover {
 .navbar-nav .nav-item.active a.nav-link {
     color: green;
 }
+
+i.active {
+    color: green;
+}
