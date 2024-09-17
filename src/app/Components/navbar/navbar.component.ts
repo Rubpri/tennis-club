@@ -54,6 +54,10 @@ export class NavbarComponent {
     this.router.navigate(['/contacto'])
   }
 
+  navigateToLogin() {
+    this.router.navigate(['/login'])
+  }
+
   ngOnInit(): void {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)

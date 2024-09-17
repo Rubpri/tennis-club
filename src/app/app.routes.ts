@@ -16,6 +16,16 @@ import { PatrocinadoresComponent } from './Components/patrocinadores/patrocinado
 // Contacto
 import { ContactoComponent } from './Components/contacto/contacto/contacto.component';
 
+// Perfil
+import { PerfilComponent } from './Components/perfil/perfil.component';
+
+// Auth
+import { SignUpComponent } from './Components/authentication/sign-up/sign-up.component';
+import { LoginComponent } from './Components/authentication/login/login.component';
+import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/auth-guard';
+
+
+
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -26,5 +36,8 @@ export const routes: Routes = [
     {path: 'campeonatos/segunda-division', component: SegundaDivisionComponent},
     {path: 'patrocinadores', component: PatrocinadoresComponent},
     {path: 'contacto', component: ContactoComponent},
+    {path: 'login', component: LoginComponent, ...canActivate(() => redirectLoggedInTo(['/perfil']))},
+    {path: 'sign-up', component: SignUpComponent, ...canActivate(() => redirectLoggedInTo(['/perfil']))},
+    {path: 'perfil', component: PerfilComponent, ...canActivate(()=> redirectUnauthorizedTo(['/login']))},
     {path: '**', redirectTo: '' },
 ];

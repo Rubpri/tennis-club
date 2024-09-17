@@ -1,0 +1,11 @@
+.container {
+    max-width: 1024px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.pointer:hover {
+    color: green;
+}

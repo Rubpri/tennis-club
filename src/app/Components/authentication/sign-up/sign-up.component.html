@@ -1,0 +1,24 @@
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="col-12 col-md-6 card p-3">
+    <form [formGroup]="signUpForm" (ngSubmit)="registrarse()" class="mb-4">
+        <h4 class="mb-4 text-center">Registro</h4>
+        <div class="mb-3">
+            <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email" required>
+        </div>
+        <div class="mb-4">
+            <input type="password" formControlName="password" class="form-control mb-1" id="password" placeholder="Contraseña" required>
+            <span style="font-size: 13px" class="ps-1"><i>Mínimo 6 caracteres</i></span>
+        </div>
+        <button type="submit" class="btn btn-primary">
+            Registrarse
+        </button>
+    </form>
+    <div 
+        class="d-flex align-items-center pointer"
+        (click)="navigateToLogin()"
+    >
+    <i class="fa-solid fa-arrow-left-long me-2"></i>
+    <a>Volver a Login</a>
+    </div>
+</div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container d-flex justify-content-center align-items-center">
+    
+    <div class="col-12 col-md-6 card p-3">
+    <form [formGroup]="loginForm" (ngSubmit)="login()" class="mb-4">
+        <h4 class="mb-4 text-center">Iniciar sesión</h4>
+        <div class="mb-3">
+            <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email" required>
+        </div>
+        <div class="mb-4">
+            <input type="password" formControlName="password" class="form-control" id="password" placeholder="Contraseña" required>
+        </div>
+        <button type="submit" class="btn btn-primary">
+            Entrar
+        </button>
+    </form>
+    <a (click)="navigateToSignUp()">¿No puedes iniciar sesión? Crear cuenta</a>
+</div>
+</div>
