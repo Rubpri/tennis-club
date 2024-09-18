@@ -14,6 +14,7 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 
+import { environment } from '../environments/environment';
 
 
 export const appConfig: ApplicationConfig = {
@@ -22,7 +23,8 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes), 
     provideClientHydration(),
     provideAnimations(),
-    provideToastr(), provideFirebaseApp(() => initializeApp({"projectId":"tennis-club-1af60","appId":"1:704430829208:web:7e72251c01b846b3d72aed","storageBucket":"tennis-club-1af60.appspot.com","apiKey":"AIzaSyAGlXQckYHYC-gSSB-KX4HSTjtVnmOMuZI","authDomain":"tennis-club-1af60.firebaseapp.com","messagingSenderId":"704430829208"})), 
+    provideToastr(), 
+    provideFirebaseApp(() => initializeApp(environment.firebase)), 
     provideAuth(() => getAuth()), 
     provideFirestore(() => getFirestore()), 
     provideStorage(() => getStorage()),

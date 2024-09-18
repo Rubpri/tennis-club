@@ -26,4 +26,8 @@ export class FooterComponent {
     this.router.navigate(['/el-club/sobre-nosotros'])
   }
 
+  navigateToHazteSocio(){
+    this.router.navigate(['/el-club/hazte-socio'])
+  }
+
 }
