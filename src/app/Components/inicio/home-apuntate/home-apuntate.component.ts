@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-apuntate',
@@ -8,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './home-apuntate.component.css'
 })
 export class HomeApuntateComponent {
+
+  constructor(
+    private router: Router,
+  ) {}
+
+  navigateToHazteSocio(){
+    this.router.navigate(["/el-club/hazte-socio"]);
+  }
 
 }
