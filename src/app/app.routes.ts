@@ -24,6 +24,11 @@ import { SignUpComponent } from './Components/authentication/sign-up/sign-up.com
 import { LoginComponent } from './Components/authentication/login/login.component';
 import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/auth-guard';
 
+// Admin Noticias
+import { AdminNoticiasComponent } from './Components/noticias/admin-noticias/admin-noticias.component';
+
+// Noticias
+import { NoticiasComponent } from './Components/noticias/noticias/noticias.component';
 
 
 
@@ -39,5 +44,7 @@ export const routes: Routes = [
     {path: 'login', component: LoginComponent, ...canActivate(() => redirectLoggedInTo(['/perfil']))},
     {path: 'sign-up', component: SignUpComponent, ...canActivate(() => redirectLoggedInTo(['/perfil']))},
     {path: 'perfil', component: PerfilComponent, ...canActivate(()=> redirectUnauthorizedTo(['/login']))},
+    {path: 'admin-noticias', component: AdminNoticiasComponent},
+    {path: 'noticias', component: NoticiasComponent},
     {path: '**', redirectTo: '' },
 ];

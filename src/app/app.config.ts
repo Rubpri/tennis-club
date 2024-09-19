@@ -14,8 +14,11 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 
+// env
 import { environment } from '../environments/environment';
 
+// FIREBASE_OPTIONS
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -26,7 +29,8 @@ export const appConfig: ApplicationConfig = {
     provideToastr(), 
     provideFirebaseApp(() => initializeApp(environment.firebase)), 
     provideAuth(() => getAuth()), 
-    provideFirestore(() => getFirestore()), 
+    provideFirestore(() => getFirestore()),
+    { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
     provideStorage(() => getStorage()),
   ]
 };
