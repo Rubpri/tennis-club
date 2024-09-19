@@ -58,6 +58,10 @@ export class NavbarComponent {
     this.router.navigate(['/login'])
   }
 
+  navigateToNoticias() {
+    this.router.navigate(['/noticias'])
+  }
+
   ngOnInit(): void {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)

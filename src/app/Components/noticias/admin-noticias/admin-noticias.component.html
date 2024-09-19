@@ -1,0 +1,55 @@
+<div class="container">
+    
+    <div class="card p-3">
+        <h4 class="mb-4 ps-1">Añadir Noticia</h4>
+        <form [formGroup]="formNoticia" (ngSubmit)="crearNoticia()">
+            <div class="mb-3">
+                <input type="text" formControlName="titular" class="form-control" id="titular" placeholder="Titular" required>
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control" formControlName="noticia" id="noticia" rows="3" placeholder="Texto de la noticia" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                Añadir noticia
+            </button>
+        </form>
+    </div>
+
+    <div class="row mt-4">
+        
+        <div class="col-12 col-md-6 ">
+            <div class="card p-3">
+            <h4 class="mb-4 ps-1">Lista de Noticias · {{ numeroNoticias }}/10</h4>
+                <ul *ngFor="let noticia of listaNoticias" class="d-flex border-bottom">
+                    <li>{{ noticia.titular }}</li>
+                    <div class="pb-2 ms-auto">
+                        <i class="fa-solid fa-eye me-3" (click)="abrirTextoNoticia(noticia.noticia)"></i>
+                        <i class="fa-solid fa-pen-to-square me-3" (click)="abrirEditarNoticia(noticia.id, noticia.titular, noticia.noticia)"></i>
+                        <i class="fa-solid fa-trash-can" (click)="deleteNoticia(noticia.id)"></i>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="col-12 col-md-6">
+            <div class="card p-3">
+                <h4 class="mb-4 ps-1">Noticia</h4>
+                <p *ngIf="verOeditar === 1">{{ textoNoticiaSeleccionada }}</p>
+                
+                <form *ngIf="verOeditar === 2" [formGroup]="formNoticiaEditar">
+                    <div class="mb-3">
+                        <input type="text" formControlName="titular" class="form-control" id="titular" placeholder="Titular" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" formControlName="noticia" id="noticia" rows="3" placeholder="Texto de la noticia" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" (click)="updateNoticia()">
+                        Editar
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+        
+</div>

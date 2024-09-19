@@ -1,0 +1,19 @@
+<div class="container">
+<div *ngFor="let noticia of listaNoticias" class="mb-4">
+    <div class="card" style="width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title border-bottom pb-2">{{noticia.titular}}</h5> 
+        <p class="card-text">
+          {{noticia.noticia}}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-success text-center justifi-content-center" (click)="navigateToAdminNoticias()">Prueba a administrar las noticias AQUÍ</button>
+        
+        
+</div>
+  
+</div>
+
