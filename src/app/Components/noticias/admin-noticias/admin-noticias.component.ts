@@ -20,6 +20,8 @@ export class AdminNoticiasComponent {
   verOeditar: number = 0;
   formNoticiaEditar: FormGroup;
   idNoticiaParaEditar: any;
+  numeroNoticias: number = 0;
+  
 
   constructor(
     private fb: FormBuilder,
@@ -27,12 +29,12 @@ export class AdminNoticiasComponent {
     private toastr: ToastrService,
   ) {
     this.formNoticia = this.fb.group({
-      titular: ['', Validators.required],
-      noticia: ['', Validators.required],
+      titular: ['', Validators.required, Validators.maxLength(40)],
+      noticia: ['', Validators.required, Validators.maxLength(300)],
     })
     this.formNoticiaEditar = this.fb.group({
-      titular: ['', Validators.required],
-      noticia: ['', Validators.required],
+      titular: ['', Validators.required, Validators.maxLength(40)],
+      noticia: ['', Validators.required, Validators.maxLength(300)],
     })
   }
 
@@ -60,7 +62,8 @@ export class AdminNoticiasComponent {
           this.listaNoticias.push({
             id: element.payload.doc.id,
             ...element.payload.doc.data()
-          })
+          });
+          this.numeroNoticias = this.listaNoticias.length;
         })
       })
     }
@@ -91,20 +94,24 @@ export class AdminNoticiasComponent {
     }
 
     updateNoticia() {
+
+      if(this.numeroNoticias <= 10) {
       const noticia: any = {
         titular: this.formNoticiaEditar.value.titular,
         noticia: this.formNoticiaEditar.value.noticia,
         fechaActualizacion: new Date()
       }
       this._noticiaService.updateNoticia(this.idNoticiaParaEditar, noticia).then(() => {
-        this.toastr.info('Noticia Actualizada con éxito')
+        this.toastr.info('Noticia Actualizada con éxito');
         this.verOeditar = 0;
       }, error => {
-        console.log(error)
-        this.toastr.error('Error al actualizar noticia')
+        console.log(error);
+        this.toastr.error('Error al actualizar noticia');
       })
+    } else {
+      this.toastr.error('Número máximo de noticias alcanzado, borre alguna para poder añadir');
     }
-
+    }
 
     ngOnInit(): void {
       this.getNoticias();
