@@ -1,27 +1,40 @@
-# TennisClub
+# Club de Tenis
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.5.
+Página web de un Club de Tenis.
 
-## Development server
+## Stack Tecnológico
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
++ HTML5, CSS3, Bootstrap, JavaScript, TypeScript
++ Angular (18.0.5)
++ Firebase (Firestore, Authentication)
 
-## Code scaffolding
+*Se ha usado ngx-env para las variables de entorno (.env)*
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Enlaces
 
-## Build
+Link al Live: <a href="https://tennis-club-rubpri.vercel.app/" target="_blank">https://tennis-club-rubpri.vercel.app/</a>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Imágenes de la App
 
-## Running unit tests
+![Img1](./tennisclub1.jpg)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Img2](./tennisclub2.jpg)
 
-## Running end-to-end tests
+![Img3](./tennisclub3.jpg)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![Img4](./tennisclub4.jpg)
 
-## Further help
+## Perfiles
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<a href="https://github.com/Rubpri" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</a>
+
+<a href="https://www.linkedin.com/in/ruben-prieto-serrano/" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
+
+<a href="https://rubpri.vercel.app/" target="_blank">
+  <img src="https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website" />
+</a>
+
